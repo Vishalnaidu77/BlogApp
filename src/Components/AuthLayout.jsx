@@ -9,7 +9,7 @@ const AuthLayout = ({ children, authentication = true }) => {
     const [loader, setLoader] = useState(true)
     const authStatus = useSelector(state => state.auth.status)
 
-    useEffect(() => {a
+    useEffect(() => {
 
         // const authValue = authStatus = true ? true : false
 
@@ -23,7 +23,7 @@ const AuthLayout = ({ children, authentication = true }) => {
     }, [authStatus, navigate, authentication])
 
   return (
-    loader ? <h1>Loading...</h1> : {children}
+    loader ? <h1>Loading...</h1> : children
   )
 }
 
